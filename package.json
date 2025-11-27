@@ -1,0 +1,51 @@
+{
+  "name": "nextjs-nestjs-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-ready monorepo template with Next.js 16, NestJS, and Prisma",
+  "keywords": [
+    "monorepo",
+    "turborepo",
+    "nextjs",
+    "nestjs",
+    "prisma",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/nextjs-nestjs-monorepo"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "start": "turbo start",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "typecheck": "turbo typecheck",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "clean": "turbo clean && rm -rf node_modules",
+    "db:generate": "turbo db:generate",
+    "db:push": "turbo db:push",
+    "db:migrate": "turbo db:migrate",
+    "db:seed": "turbo db:seed",
+    "db:studio": "turbo db:studio"
+  },
+  "dependencies": {
+    "use-debounce": "^8.0.4"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.3",
+    "prettier": "^3.4.2"
+  },
+  "packageManager": "pnpm@10.18.0",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=10.0.0"
+  }
+}
