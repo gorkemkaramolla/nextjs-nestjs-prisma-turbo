@@ -18,6 +18,7 @@ out/
 *.pem
 .env*.local
 .env
+*.tsbuildinfo
 
 # Debug
 npm-debug.log*
@@ -32,6 +33,7 @@ pnpm-debug.log*
 # IDE
 .vscode/
 .idea/
+.claude/settings.local.json
 *.swp
 *.swo
 *~
