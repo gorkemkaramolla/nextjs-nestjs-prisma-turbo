@@ -17,4 +17,9 @@ export class AppController {
       timestamp: new Date().toISOString(),
     };
   }
+
+  @Get('users')
+  async getUsers() {
+    return await this.appService.getUsers();
+  }
 }

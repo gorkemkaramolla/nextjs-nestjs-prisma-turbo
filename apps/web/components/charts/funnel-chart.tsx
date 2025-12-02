@@ -52,7 +52,7 @@ interface FunnelChartInnerProps extends FunnelChartProps {
 /**
  * Responsive funnel visualization with motion powered transitions.
  */
-export function FunnelChart(props: FunnelChartProps): JSX.Element {
+export function FunnelChart(props: FunnelChartProps) {
   return (
     <div className="size-full">
       <ParentSize className="relative">
@@ -74,7 +74,7 @@ function FunnelChartInner({
   tooltips = true,
   defaultTooltipStepId,
   chartPadding = 40,
-}: FunnelChartInnerProps): JSX.Element {
+}: FunnelChartInnerProps) {
   const { isMobile } = useMediaQuery();
   const [tooltip, setTooltip] = useState<string | null>(
     defaultTooltipStepId ?? null
@@ -227,7 +227,7 @@ function PersistentPercentage({
   y,
   value,
   colorClassName,
-}: PersistentPercentageProps): JSX.Element {
+}: PersistentPercentageProps) {
   const textRef = useRef<SVGTextElement>(null);
   const textWidth = textRef.current?.getComputedTextLength() ?? 0;
   const pillWidth = textWidth + 28;

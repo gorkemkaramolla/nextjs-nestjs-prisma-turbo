@@ -12,7 +12,7 @@
   ],
   "exports": {
     ".": "./src/index.tsx",
-    "./icons": "./src/icons/index.ts",
+    "./icons": "./src/icons/index.tsx",
     "./charts": "./src/charts/index.ts"
   },
   "scripts": {

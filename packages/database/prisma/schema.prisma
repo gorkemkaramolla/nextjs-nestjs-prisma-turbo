@@ -1,25 +1,19 @@
-// Prisma Schema for Next.js + NestJS Monorepo
-// Database: MySQL
-
 generator client {
-  provider = "prisma-client-js"
-  output   = "../node_modules/.prisma/client"
+  output     = "../generated/client"
+  provider   = "prisma-client-js"
+  engineType = "binary"
 }
-
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
-// Example User model
 model User {
   id        String   @id @default(cuid())
+  name      String
   email     String   @unique
-  name      String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@map("users")
 }
-
-// Add your own models here

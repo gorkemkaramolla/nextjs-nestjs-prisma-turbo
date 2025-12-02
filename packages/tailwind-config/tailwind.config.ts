@@ -256,7 +256,7 @@ const config: Config = {
     forms,
     typography,
     scrollbarHide,
-    radix,
+    radix({}) as any,
     // TODO: Remove the container queries plugin when we upgrade to Tailwind v4
     containerQueries,
   ],
