@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "dev": "turbo dev",
-    "build": "turbo build",
+    "build": "pnpm run db:generate && pnpm run db:push && turbo build",
     "start": "turbo start",
     "lint": "turbo lint",
     "test": "turbo test",
