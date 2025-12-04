@@ -3,7 +3,7 @@
   "globalDependencies": ["**/.env.*local", "**/.env"],
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^build", "^db:generate"],
       "outputs": [".next/**", "!.next/cache/**", "dist/**"]
     },
     "dev": {
@@ -25,16 +25,20 @@
       "dependsOn": ["^build"]
     },
     "db:generate": {
-      "cache": false
+      "cache": false,
+      "outputs": ["generated/**"]
     },
     "db:push": {
-      "cache": false
+      "cache": false,
+      "dependsOn": ["^db:generate"]
     },
     "db:migrate": {
-      "cache": false
+      "cache": false,
+      "dependsOn": ["^db:generate"]
     },
     "db:seed": {
-      "cache": false
+      "cache": false,
+      "dependsOn": ["^db:generate"]
     },
     "db:studio": {
       "cache": false
