@@ -42,10 +42,11 @@ export default function UiShowcasePage() {
   const [stepperValue, setStepperValue] = useState(10);
 
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
-  const { data: users, error, isLoading } = useSWR<User[]>(
-    `${apiUrl}/api/users`,
-    fetcher
-  );
+  const {
+    data: users,
+    error,
+    isLoading,
+  } = useSWR<User[]>(`${apiUrl}/api/users`, fetcher);
 
   return (
     <TooltipProvider>
@@ -54,6 +55,7 @@ export default function UiShowcasePage() {
           <div className="text-center space-y-4">
             <h1 className="text-4xl font-bold tracking-tight text-neutral-900">
               NEXTJS & NESTJS & PRISMA & TAILWIND & DUB UI
+            </h1>
             <p className="text-lg text-neutral-500 max-w-2xl mx-auto">
               A comprehensive showcase of the components, typography, and visual
               style used throughout the application.
